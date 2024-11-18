@@ -268,7 +268,7 @@ function scanDirectory(dir, componentsCache) {
     } else if (file.endsWith(".vue")) {
       // 只处理 .vue 文件
       const fileNameWithoutExt = path.basename(file, ".vue"); // 获取文件名，不带扩展名
-      if (fileNameWithoutExt === "index.vue") {
+      if (fileNameWithoutExt === "index") {
         // 如果是 index.vue，使用目录名作为键
         const dirName = path.basename(dir); // 获取当前目录的名称
         componentsCache[dirName] = filePath; // 将目录名称和绝对路径保存到缓存中
