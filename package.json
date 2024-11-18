@@ -1,0 +1,55 @@
+{
+  "name": "generator-components-vue2",
+  "displayName": "generator-components-vue2",
+  "description": "在vue2项目中使用该插件，并设置好组件放置的目录，会自动进行扫描，并在调用命令“选择组件”时，给出prop以及生成对应的代码",
+  "version": "1.0.0",
+  "publisher": "lingcha",
+  "repository": "https://github.com/lingcha/generator/",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onWorkspaceFolderChange"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "generator-list.select",
+        "title": "选择组件"
+      }
+    ],
+    "configuration":{
+      "type":"object",
+      "title":"generator setting",
+      "properties": {
+        "generator.scanDir": {
+          "type":"string",
+          "default": "src/components",
+          "description": "存放项目组件的目录，也是扫描组件的目录"
+        }
+      }
+  }
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.2",
+    "@babel/traverse": "^7.25.9"
+  }
+}
