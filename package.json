@@ -2,7 +2,7 @@
   "name": "generator-components-vue2",
   "displayName": "generator-components-vue2",
   "description": "在vue2项目中使用该插件，并设置好组件放置的目录，会自动进行扫描，并在调用命令“选择组件”时，给出prop以及生成对应的代码",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "lingcha",
   "repository": "https://github.com/lingcha/generator/",
   "engines": {
